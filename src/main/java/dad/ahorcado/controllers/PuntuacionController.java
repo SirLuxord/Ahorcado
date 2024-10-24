@@ -17,7 +17,7 @@ public class PuntuacionController implements Initializable {
 
     }
 
-    public PuntuacionController(GridPane root) {
+    public PuntuacionController() {
         try{
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/PuntuacionView.fxml"));
             loader.setController(this);
@@ -35,10 +35,6 @@ public class PuntuacionController implements Initializable {
 
     public GridPane getRoot() {
         return root;
-    }
-
-    public void setRoot(GridPane root) {
-        this.root = root;
     }
 
 }
