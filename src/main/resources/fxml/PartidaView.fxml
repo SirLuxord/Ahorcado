@@ -10,8 +10,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="root" prefHeight="320.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="root" prefHeight="320.0" prefWidth="358.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <right>
       <AnchorPane BorderPane.alignment="CENTER">
          <children>
@@ -44,8 +45,14 @@
                   <Image url="@../images/hangman/1.png" />
                </image>
             </ImageView>
-            <Label fx:id="secretWordLabel" text="Label" />
-            <Label fx:id="guessedLetterLabel" text="Label" />
+            <Label fx:id="secretWordLabel" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
+            <Label fx:id="guessedLetterLabel" text="Label">
+               <font>
+                  <Font size="24.0" />
+               </font></Label>
          </children>
          <padding>
             <Insets left="45.0" top="30.0" />
@@ -56,8 +63,8 @@
       <HBox alignment="TOP_CENTER" minWidth="100.0" spacing="5.0" BorderPane.alignment="CENTER">
          <children>
             <TextField fx:id="guessLetterTextField" />
-            <Button mnemonicParsing="false" onAction="#onLetterAction" text="Letra" />
-            <Button mnemonicParsing="false" onAction="#onSolveAction" text="Resolver" />
+            <Button fx:id="letterButton" mnemonicParsing="false" onAction="#onLetterAction" text="Letra" />
+            <Button fx:id="solveButton" mnemonicParsing="false" onAction="#onSolveAction" text="Resolver" />
          </children>
          <BorderPane.margin>
             <Insets bottom="30.0" />

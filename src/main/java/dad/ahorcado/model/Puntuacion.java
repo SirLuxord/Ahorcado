@@ -26,4 +26,9 @@ public class Puntuacion {
     public void setPuntos(int puntos) {
         this.puntos = puntos;
     }
+
+    @Override
+    public String toString() {
+        return nombre + ": " + puntos + " puntos";
+    }
 }
